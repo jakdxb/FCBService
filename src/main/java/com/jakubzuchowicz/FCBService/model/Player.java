@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 @Entity
 public class Player {
     @Id
-    private int jerseyNumber;
+    private Long jerseyNumber;
 
     private String name;
 
@@ -17,7 +17,9 @@ public class Player {
 
     private int height;
 
-    private int goals = 0;
+    private int goals;
 
-    private int assists = 0;
+    private int assists;
+
+    private int matches;
 }
