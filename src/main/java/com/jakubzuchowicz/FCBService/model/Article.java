@@ -14,13 +14,16 @@ public class Article {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long articleId;
 
     private String title;
 
     private String content;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "article_id")
-    private List<Comment> comments = new ArrayList<>();
+    @OneToMany(mappedBy = "article", cascade = CascadeType.REMOVE)
+    private List<Comment> comments;
+
+    public void addComment(Comment comment) {
+        comments.add(comment);
+    }
 }

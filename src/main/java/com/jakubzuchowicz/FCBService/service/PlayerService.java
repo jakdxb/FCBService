@@ -36,7 +36,6 @@ public class PlayerService {
     }
 
     public Player updatePlayer(Long playerId, Player updatedPlayer) {
-        // Sprawdzanie czy zawodnik o podanym ID istnieje
         Player existingPlayer = playerRepository.findById(playerId)
                 .orElseThrow(() -> new IllegalArgumentException("Zawodnik o podanym ID nie istnieje"));
 
