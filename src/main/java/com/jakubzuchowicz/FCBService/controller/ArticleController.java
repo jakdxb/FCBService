@@ -1,13 +1,17 @@
 package com.jakubzuchowicz.FCBService.controller;
 
 import com.jakubzuchowicz.FCBService.model.Article;
+import com.jakubzuchowicz.FCBService.model.Comment;
 import com.jakubzuchowicz.FCBService.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
+@CrossOrigin
 @RequestMapping("/api/barka")
 public class ArticleController {
 
@@ -15,7 +19,7 @@ public class ArticleController {
     @Autowired
     public ArticleController(ArticleService articleService) {this.articleService = articleService;}
 
-    @GetMapping("/{id}")
+    @GetMapping("/articles/{id}")
     public ResponseEntity<Article> getArticleById(@PathVariable Long id) {
         Article article = articleService.findArticleById(id);
         if (article != null) {
@@ -24,12 +28,18 @@ public class ArticleController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+    @GetMapping("/articles")
+    public ResponseEntity<List<Article>> getArticles() {
+        List<Article> articles = articleService.getArticles();
+        return new ResponseEntity<>(articles, HttpStatus.OK);
+    }
     @PostMapping
     public ResponseEntity<Article> addArticle(@RequestBody Article newArticle) {
         Article savedArticle = articleService.addArticle(newArticle);
         return new ResponseEntity<>(savedArticle, HttpStatus.CREATED);
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/articles/{id}")
     public ResponseEntity<String> deleteArticle(@PathVariable Long id) {
         articleService.deleteArticle(id);
         return new ResponseEntity<>(HttpStatus.OK);

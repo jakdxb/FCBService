@@ -1,9 +1,12 @@
 package com.jakubzuchowicz.FCBService.service;
 import com.jakubzuchowicz.FCBService.model.Article;
+import com.jakubzuchowicz.FCBService.model.Comment;
 import com.jakubzuchowicz.FCBService.model.Player;
 import com.jakubzuchowicz.FCBService.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class ArticleService {
@@ -13,6 +16,10 @@ public class ArticleService {
 
 
     public Article findArticleById(Long articleId) { return articleRepository.findById(articleId).orElse(null); }
+
+    public List<Article> getArticles() {
+        return articleRepository.findAll();
+    }
 
     public Article addArticle(Article newArticle) {
         if (newArticle == null) {

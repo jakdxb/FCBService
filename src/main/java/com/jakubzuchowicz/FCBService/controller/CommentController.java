@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
+@CrossOrigin
 @RequestMapping("/api/barka")
 public class CommentController {
     private final CommentService commentService;
