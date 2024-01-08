@@ -35,14 +35,14 @@ nav{
     position: absolute;
     bottom: 13px;
     left: 20px;
-    transition: width 0.3s ease; /* Dodanie animacji */
+    transition: width 0.3s ease;
 }
 #navbar li a:hover{
    color: #395fb2;
 }
 
 #navbar li a:hover::after {
-    width: 40%; /* Zwiększenie szerokości po najechaniu */
+    width: 40%;
 }
 
 #mobile {

@@ -25,9 +25,6 @@ const LatestArticle = () => {
 
     const { articleId, title, content, creationDate, imageUrl } = latestArticle;
 
-    // LatestArticle.js
-// ... (reszta kodu)
-
     return (
         <div className="latest-article-container left-half">
             <Link to={`/article/${articleId}`} className="latest-article-link">

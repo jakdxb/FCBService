@@ -19,8 +19,8 @@
 }
 
 .match-card img {
-    max-width: 100px; /* Dostosuj szerokość obrazu zgodnie z preferencjami */
-    max-height: 100px; /* Dostosuj wysokość obrazu zgodnie z preferencjami */
+    max-width: 100px;
+    max-height: 100px;
 }
 
 .team {
