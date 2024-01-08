@@ -1,9 +1,11 @@
 package com.jakubzuchowicz.FCBService.service;
 import com.jakubzuchowicz.FCBService.model.Article;
 import com.jakubzuchowicz.FCBService.model.Comment;
+import com.jakubzuchowicz.FCBService.model.Match;
 import com.jakubzuchowicz.FCBService.model.Player;
 import com.jakubzuchowicz.FCBService.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -44,4 +46,11 @@ public class ArticleService {
 
         return articleRepository.save(existingArticle);
     }
+
+    public Article getLatestArticle() {
+        Sort sort = Sort.by(Sort.Direction.DESC, "creationDate");
+        return articleRepository.findTop1By(sort);
+    }
+
+
 }
