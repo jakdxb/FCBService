@@ -29,6 +29,16 @@ public class ArticleController {
         }
     }
 
+    @GetMapping("/articles/latest")
+    public ResponseEntity<Article> getLatestArticle() {
+        Article latestArticle = articleService.getLatestArticle();
+        if (latestArticle != null) {
+            return new ResponseEntity<>(latestArticle, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
     @GetMapping("/articles")
     public ResponseEntity<List<Article>> getArticles() {
         List<Article> articles = articleService.getArticles();
