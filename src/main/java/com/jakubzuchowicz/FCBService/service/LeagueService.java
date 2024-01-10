@@ -11,7 +11,7 @@ public class LeagueService {
     @Autowired
     LeagueService(LeagueRepository leagueRepository){ this.leagueRepository = leagueRepository; }
 
-    public League findLeagueById(String id){ return leagueRepository.findById(id).orElse(null); }
+    public League findLeagueById(Long id){ return leagueRepository.findById(id).orElse(null); }
 
     public List<League> getLeagues() { return leagueRepository.findAll(); }
 

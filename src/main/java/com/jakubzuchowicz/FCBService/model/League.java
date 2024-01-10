@@ -10,8 +10,15 @@ import java.util.List;
 @Entity
 public class League {
     @Id
-    private String leagueId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long leagueId;
+
+    private String leagueName;
 
     @OneToMany(mappedBy = "league", cascade = CascadeType.REMOVE)
     private List<Team> teams;
+
+    public void addTeam(Team team) {
+        teams.add(team);
+    }
 }

@@ -17,7 +17,7 @@ public class LeagueController {
     public LeagueController(LeagueService leagueService) { this.leagueService = leagueService; }
 
     @GetMapping("/{id}")
-    public ResponseEntity<League> getLeagueById(@PathVariable String id) {
+    public ResponseEntity<League> getLeagueById(@PathVariable Long id) {
         League league = leagueService.findLeagueById(id);
         if (league != null) {
             return new ResponseEntity<>(league, HttpStatus.OK);
