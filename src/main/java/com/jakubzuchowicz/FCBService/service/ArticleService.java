@@ -1,8 +1,5 @@
 package com.jakubzuchowicz.FCBService.service;
 import com.jakubzuchowicz.FCBService.model.Article;
-import com.jakubzuchowicz.FCBService.model.Comment;
-import com.jakubzuchowicz.FCBService.model.Match;
-import com.jakubzuchowicz.FCBService.model.Player;
 import com.jakubzuchowicz.FCBService.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;

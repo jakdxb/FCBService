@@ -1,7 +1,6 @@
 package com.jakubzuchowicz.FCBService.controller;
 
 import com.jakubzuchowicz.FCBService.model.Article;
-import com.jakubzuchowicz.FCBService.model.Comment;
 import com.jakubzuchowicz.FCBService.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
