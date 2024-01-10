@@ -1,4 +1,5 @@
 package com.jakubzuchowicz.FCBService.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.*;
@@ -15,4 +16,9 @@ public class Team {
     private int goalsConceded;
 
     private int points;
+
+    @JsonIgnore
+    @ManyToOne(cascade = CascadeType.DETACH)
+    @JoinColumn(name = "league_id", referencedColumnName = "leagueId")
+    private League league;
 }
