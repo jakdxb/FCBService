@@ -1,0 +1,48 @@
+/* LeagueTableStyles.css */
+
+.league-table-container {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 30%;
+    float: right;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.league-title-container {
+    background-color: #fff;
+    padding: 10px; /* Zmniejszenie odstępu */
+    border-radius: 8px;
+    display: block;
+    width: 88%;
+    text-align: center;
+    white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+    overflow: hidden; /* Ukrywa ewentualne nadmiarowy tekst */
+    text-overflow: ellipsis; /* Dodaje "..." w przypadku, gdy tekst jest zbyt długi */
+}
+
+.table-container {
+    background-color: #f2f2f2;
+    padding: 10px; /* Zmniejszenie odstępu */
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+}
+
+thead th,
+tbody td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+tbody td {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Dodaj inne style, jeśli są potrzebne */
