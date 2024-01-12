@@ -1,12 +1,11 @@
 // pages/ArticlePage.js
 import React from 'react';
 import ArticleView from '../components/ArticleView';
+import './ArticlePageStyles.css';  // Import stylów dla tej strony
 
 const ArticlePage = () => {
     return (
-        <div>
-            <h1>Article Page</h1>
-            {/* Inne elementy strony artykułu, jeśli są */}
+        <div className="article-page-container">  {/* Dodaj klasę dla kontenera strony */}
             <ArticleView />
         </div>
     );

@@ -1,0 +1,9 @@
+.article-page-container {
+    background: linear-gradient(to bottom, #0d2496, #f2f2f2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
