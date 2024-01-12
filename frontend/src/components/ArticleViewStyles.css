@@ -1,0 +1,71 @@
+.article-view {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;  /* Dowolny kolor tła */
+    border-radius: 8px;  /* Zaokrąglone rogi */
+    color: #091e73;  /* Kolor tekstu na tle */
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.image-container2 {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.article-view .image-container2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+}
+
+ .article-view img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+ .article-view p {
+     float: left;
+ }
+
+
+.article-content {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.article-comments {
+    margin-top: 20px;
+}
+
+.article-comments h2 {
+    margin-bottom: 10px;
+}
+
+.article-comments ul {
+    list-style-type: none;  /* Dodaj tę linię, aby usunąć domyślne kropki */
+    padding: 0;             /* Dodaj tę linię, aby usunąć dodatkowy padding dla listy */
+}
+
+.article-comments li {
+    margin-bottom: 10px;
+    background-color: rgba(238, 234, 234, 0.8);  /* Dowolny kolor tła dla komentarzy */
+    padding: 10px;  /* Dodatkowy padding dla estetyki komentarza */
+    border-radius: 8px;  /* Zaokrąglone rogi */
+    color: #091e73;  /* Kolor tekstu na tle komentarza */
+}
+
+
+/* Add more styles as needed */
