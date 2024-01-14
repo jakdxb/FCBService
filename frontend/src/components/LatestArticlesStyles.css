@@ -16,6 +16,10 @@
     border-radius: 10px;
 }
 
+.article-card:hover h3 {
+    color: #d7d745; /* Kolor czcionki po najechaniu */
+}
+
 .article-image img {
     width: 100%;
     height: auto;
@@ -39,6 +43,7 @@ h3 {
     margin: 0;
     font-size: 1.2em;
     font-weight: bold;
+    transition: color 0.5s ease;
 }
 
 p {

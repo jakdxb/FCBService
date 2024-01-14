@@ -57,6 +57,11 @@
     left: 0;
     color: white;
     z-index: 2;
+    transition: color 0.5s ease;
+}
+
+.latest-article:hover h2 {
+    color: #d7d745;
 }
 
 .latest-article p {
@@ -64,4 +69,5 @@
     margin: 0;
     font-size: 1.2em;
 }
+
 
