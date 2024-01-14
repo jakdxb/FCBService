@@ -9,7 +9,7 @@ const LatestArticle = () => {
     useEffect(() => {
         const fetchLatestArticle = async () => {
             try {
-                const response = await axios.get('http://localhost:8889/api/barka/articles/latest');
+                const response = await axios.get('http://localhost:8889/api/articles/latest');
                 setLatestArticle(response.data);
             } catch (error) {
                 console.error('Error fetching latest article:', error);
@@ -23,7 +23,7 @@ const LatestArticle = () => {
         return <p>Loading latest article...</p>;
     }
 
-    const { articleId, title, content, creationDate, imageUrl } = latestArticle;
+    const { articleId, title,imageUrl } = latestArticle;
 
     return (
         <div className="latest-article-container left-half">
